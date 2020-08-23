@@ -25,7 +25,7 @@ class SerialDelayTest(serial.Serial):
             #print('sample {}'.format(i))
             #sys.stdout.flush()
             t1 = time.time()
-            self.write('s\n')
+            self.write('s\n'.encode())
             self.readline()
             t2 = time.time()
             dt = t2 - t1
