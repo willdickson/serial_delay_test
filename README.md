@@ -1,3 +1,3 @@
 ## serial_delay_test 
 
-Measures round-trip delay for usb/serial commands.
+Simple utility which measures round-trip delay for usb/serial commands.

@@ -22,8 +22,6 @@ class SerialDelayTest(serial.Serial):
         dt_list = []
 
         for i in range(num_sample):
-            #print('sample {}'.format(i))
-            #sys.stdout.flush()
             t1 = time.time()
             self.write('s\n'.encode())
             self.readline()
@@ -49,13 +47,3 @@ class SerialDelayTest(serial.Serial):
 
 
 # -----------------------------------------------------------------------------
-if __name__ == '__main__':
-    import sys
-    
-    if len(sys.argv) > 1:
-        port = sys.argv[1]
-    else:
-        port =  '/dev/ttyUSB0'
-    test = SerialDelayTest(port)
-    test.run(1000)
-
